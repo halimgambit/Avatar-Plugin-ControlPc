@@ -226,6 +226,7 @@ function repertoireBureau (data, client) {
     });
 }
 
+/*
 function repertoirePlugins (data, client) {
 	Avatar.speak("J'ouvre le dossier plug in", data.client, function() {
 	Avatar.Speech.end(data.client, true, () => {
@@ -234,6 +235,7 @@ function repertoirePlugins (data, client) {
     });
     });
 }
+*/
 
 function masqueLesFenetres (data, client) {
 	Avatar.speak("je passe au bureau", data.client, function() {
@@ -312,7 +314,7 @@ function redemarrePc (data, client) {
 }
 
 function arretePc (data, client) {
-	Avatar.speak("J'allume l'écran|Je rallume l'écran", data.client, function() {
+	Avatar.speak("J'arrete le pc|J'arrete l'ordinateur", data.client, function() {
 	Avatar.Speech.end(data.client, true, () => {
 	Avatar.runApp(__dirname + "/nircmd/nircmdc64.exe exitwin poweroff", null, data.client , function(){
 	});
