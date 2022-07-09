@@ -1,0 +1,63 @@
+{
+	"modules": { 
+		"ControlPc": {
+			"version": "1.0",
+			"name": "controldupc",
+			"nomUsers": "pc",
+			"lettreCd": "D",
+			"tts": {
+				"Salon": {
+					"setVolume": "A combien veux tu régler le volume ?",
+					"command2": "J'ai éteins la lumière"
+				},
+				"Cuisine": {
+					"command1": "J'ai allumé les spots",
+					"command2": "J'ai éteins les spots"
+				}
+			},
+			"clients": {
+				"Salon": {
+					"command1": 60,
+					"command2": 30
+				},
+				"Cuisine": {
+					"command1": 50,
+					"command2": 20
+				}
+			},
+			"rules": {
+				"setVolume": ["(rule|adjust) * volume", "(rule|adjust) * sound"],
+				"VolumeUp": ["turn up * sound","up * volume"],
+				"VolumeDown": ["turn down the sound","lower * volume"],
+				"volumeMute": ["stop * volume", "stop * sound"],
+				"volumeUnMute": ["remember * volume", "remember * sound","return * volume","return * sound"],
+				"repertoireExplorateur": ["display * workstation","poster * workstation"],
+				"repertoireTelechargement": ["download","display the download folder"],
+				"repertoireC": ["display disk c","display the disk c folder c","disk file c"],
+				"repertoireVideos": ["video","display the video folder"],
+				"repertoireDocuments": ["document","display the document folder"],
+				"repertoireMusiques": ["music","display the music folder"],
+				"repertoireVideos": ["video","display the video folder"],
+				"repertoireImages": ["image","display the images folder"],
+				"repertoireBureau": ["display the desktop folder","display the desktop"],
+				"repertoirePlugins": ["plugin","display the plugin folder"],
+				"masqueLesFenetres": ["go to the office"],
+				"afficheLesFenetres": ["display * (page|window|office)","show window"],
+				"vueGlobal": ["view * global","overview","global","display * 3 d"],
+				"restoreFenetres": ["restore * (window|page)","restore"],
+				"fermeFenetres": ["(close|farm) * (window|page)"],
+				"fermeNavigateurs": ["(close|farm|stop) * browser"],
+				"fermeSession": ["close * session"],
+				"redemarrePc": ["restart * (pc|computer)"],
+				"arretePc": ["(off|turn off|stop) * (pc|computer)"],
+				"allumeEcran": ["turn on * (screen|monitor)"],
+				"eteinsEcran": ["off * (screen|monitor)"],
+				"lecteurCdOuvert": ["open the cd player"],
+				"lecteurCdfermer": ["(close|farm) * cd player"],
+				"corbeille": ["show * trash","display the recycle bin","(display|poster) * basket","display * trash","trash"],
+				"videCorbeille": ["empty * trash","empty * basket"]
+			}
+		}
+	}
+}
+			
