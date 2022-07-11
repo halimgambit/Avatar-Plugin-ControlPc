@@ -1,18 +1,19 @@
 exports.action = function(data, callback){
 
-	var nomUsers = Config.modules['ControlPc'].nomUsers;
-	if (!Config.modules['ControlPc'].nomUsers){
-    Avatar.speak('nom d\'utilisateur du pc non renseigner, renseigne le dans le fichier propriété' , data.client , function(){
-    Avatar.Speech.end(data.client);
-    });
-    return;
+let nomUsers = "";
+if(!nomUsers){
+	Avatar.speak('nom d\'utilisateur du pc non renseigner, renseigne le dans le fichier js a la ligne nom user' , data.client , function(){
+		Avatar.Speech.end(data.client);
+		});
+		return;
 }
-    var lettreCd = Config.modules['ControlPc'].lettreCd
-    if (!Config.modules['ControlPc'].lettreCd){
-    Avatar.speak('lettre du lecteure disque manquante, renseigne la dans le fichier propriété' , data.client , function(){
-    Avatar.Speech.end(data.client);  
-});
-    return;
+
+let lettreCd = "";
+if(!lettreCd) {
+	Avatar.speak('lettre du lecteure disque manquante, rrenseigne le dans le fichier js a la ligne lettre cd' , data.client , function(){
+		Avatar.Speech.end(data.client);  
+	});
+		return;
 }
 
 
