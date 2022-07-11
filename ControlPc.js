@@ -10,7 +10,7 @@ if(!nomUsers){
 
 let lettreCd = "";
 if(!lettreCd) {
-	Avatar.speak('lettre du lecteure disque manquante, rrenseigne le dans le fichier js a la ligne lettre cd' , data.client , function(){
+	Avatar.speak('lettre du lecteure disque manquante, rrenseigne la dans le fichier js a la ligne lettre cd' , data.client , function(){
 		Avatar.Speech.end(data.client);  
 	});
 		return;
